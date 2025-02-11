@@ -1,0 +1,43 @@
+﻿@model Form
+
+<h1>Movie Form</h1>
+
+<form method="post">
+    <label asp-for="Category">Category</label>
+    <input asp-for="Category" />
+    <br />
+    <br />
+    <label asp-for="Title">Title</label>
+    <input asp-for="Title"/>
+    <br />
+    <br />
+    <label asp-for="Year">Year</label>
+    <input asp-for="Year"/>
+    <br />
+    <br />
+    <label asp-for="Director">Director</label>
+    <input asp-for="Director" />
+    <br />
+    <br />
+    <label asp-for="Rating">Rating</label>
+    <input asp-for="Rating" />
+    <br />
+    <br />
+    <label asp-for="Edited">Edited</label>
+    <select asp-for="Edited">
+           <option value="true">Yes</option>
+           <option value="false">No</option>
+    </select>
+    <br />
+    <br />
+    <label asp-for="LentTo">Lent To</label>
+    <input asp-for="LentTo" />
+    <br />
+    <br />
+    <label asp-for="Notes">Notes</label>
+    <input asp-for="Notes" />
+    <br />
+    <br />
+
+    <button type="submit">Submit Form</button>
+</form>
