@@ -1,7 +1,7 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
-<h1>The Hoel Hilton Film Collection</h1>
+<h1>The Joel Hilton Film Collection</h1>
 
 <div>
     <p>A collection of films rated and reviewed by Joel Hilton</p>
@@ -9,9 +9,9 @@
 </div>
 <br />
 <div>
-    <a asp-controller="Home" asp-action="FillOutForm">Fill out a form to enter a movie into my collection!</a>
+    <a asp-controller="Home" asp-action="Index">Home</a>
     <br />
-    <a>Watch me perform at Quick Wits Comedy</a>
+    <a asp-controller="Home" asp-action="MovieForm">Fill out a form to enter a movie into my collection!</a>
     <br />
-    <a>Baconsale Site</a>
+    <a asp-controller="Home" asp-action="GetToKnowJoel">Get to Know Joel</a>
 </div>

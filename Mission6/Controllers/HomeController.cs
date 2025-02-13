@@ -4,28 +4,39 @@ using Mission6.Models;
 
 namespace Mission6.Controllers
 {
+
+
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
 
-        public HomeController(ILogger<HomeController> logger) //Constructor
+        public IActionResult GetToKnowJoel()
         {
-            _logger = logger;
+            return View();
         }
 
+
+        private MovieFormContext _context;
+        public HomeController(MovieFormContext temp) //constructor
+        {
+            _context = temp;
+        }
+
+
+        [HttpGet]
         public IActionResult Index()
         {
             return View();
         }
-        [HttpGet]
-        public IActionResult FillOutForm()
+        public IActionResult MovieForm()
         {
-            return View("MovieForm");
+            return View();
         }
 
         [HttpPost]
         public IActionResult MovieForm(Form response)
         {
+            _context.Forms.Add(response); //Adds record to database
+            _context.SaveChanges();
             return View("Confirmation");
         }
     }

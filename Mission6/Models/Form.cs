@@ -1,8 +1,11 @@
-﻿namespace Mission6.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace Mission6.Models
 {
     public class Form
     {
-        public int FormID { get; }
+        [Key]
+        public int FormID { get; set; }
         public string Category { get; set; }
         public string Director { get; set; }
         public string Title { get; set; }
